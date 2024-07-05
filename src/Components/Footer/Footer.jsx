@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import './footer.css';
+import Subscribe from '../Subscribe/Subscribe';
 
 const Footer = () => {
   return (
@@ -43,21 +44,7 @@ const Footer = () => {
 
       <div className="col-span-2">
         <h4 className="font-semibold text-gray-100">Stay up to date</h4>
-
-        <form>
-          <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2 dark:bg-neutral-900">
-            <div className="w-full">
-              <label for="hero-input" className="sr-only">Search</label>
-              <input type="text" id="hero-input" name="hero-input" className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Enter your email"/>
-            </div>
-            <a className="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-              Subscribe
-            </a>
-          </div>
-          <p className="mt-3 text-sm text-gray-400">
-            New UI kits or big discounts. Never spam.
-          </p>
-        </form>
+        <Subscribe/>
       </div>
  
     </div>

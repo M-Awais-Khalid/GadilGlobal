@@ -1,0 +1,76 @@
+.HeroSection{
+    height: 55vh;
+}
+.container {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  
+  .container span {
+    text-transform: uppercase;
+    display: block; 
+  }
+  
+  .text1 {
+    color: black;
+    background-color: #ffffff;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+
+    position: relative;
+  /*   shorthand animation property: name | duration | iteration count */
+  /*   animation: text 4s 1; */
+    animation-name: text;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+  }
+  
+  .text2 {
+    font-size: 25px;
+    color: #d2e716;
+  }
+  .text3 {
+    color: lightgrey;
+    
+  }
+  .pictures{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    gap: 30px;
+    margin-top: 30px !important;
+  }
+
+  .icon img{
+    width:  80px;
+    height:  80px;
+    padding: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  }
+  
+  @keyframes text {
+    0% {
+      color: black;
+      margin-bottom: -40px;
+    }
+    30% {
+      letter-spacing: 25px;
+      margin-bottom: -40px;
+    }
+    85% {
+      letter-spacing: 8px;
+      margin-bottom: -40px;
+    }
+    100% {
+      margin-bottom: 20px;
+    }
+}

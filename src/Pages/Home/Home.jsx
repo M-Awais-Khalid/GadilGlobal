@@ -2,25 +2,26 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import desktop from '../../Assets/English-Desktop.png'
 import { Image } from 'react-bootstrap';
 import bgMainPic from '../../Assets/soloutions-removebg-preview.png';
 import styles from "./home.module.css";
 import DemoBtn from '../../Components/DemoBtn/DemoBtn';
 import FaqSection from '../../Components/FaqSection/FaqSection';
+import HeroSection from '../../Components/HeroSection/HeroSection'
+import Subscribe from '../../Components/Subscribe/Subscribe';
 const Home = () => {
   return (
     <>
-    <Container className='p-5'>
+    <HeroSection/> 
+    <Container className='lg:p-5'>
       <Row  className={styles.heroSection}>
-        <Col>
+        <Col md={6}>
             <h1 className='fw-bold'>eProcurement <br/> Solutions</h1>
-            <p className='pr-6'>Penny offers a comprehensive and intelligent cloud-based procurement solution 
+            <p className='lg:pr-6'>Penny offers a comprehensive and intelligent cloud-based procurement solution 
             helping businesses streamline their procurement processes, expending resources
             more wisely by promoting user adoption, supplier engagement, expenditure management,
             and more.</p>
-            {/* <Button variant="warning" className='fs-4 fw-bold'>REQUEST DEMO</Button> */}
             <DemoBtn/>
         </Col>
         <Col>
@@ -30,7 +31,7 @@ const Home = () => {
       </Row>
       <Row>
         <Col>
-            <h3 className='text-center p-5'>In an era where the average procurement department only handles 63% of
+            <h3 className='text-center py-5 md:p-5'>In an era where the average procurement department only handles 63% of
              expenditure management, in today's tech-driven world, businesses require 
              cloud procurement processes to fully control their spending,
               establish communication with suppliers, and optimize their ordering procedures.</h3>
@@ -117,10 +118,7 @@ const Home = () => {
         </Row>
         <div className={`${styles.mailSub} bg-gradient-to-tr from-indigo-600 via-indigo-700 to-violet-800`}>
           <h2 className=' text-white'>Subscribe to get updated</h2>
-          <form className={styles.subForm}>
-            <input type='mail' placeholder='E-mail Address'/>
-            <Button variant='secondary' className={`${styles.updateBtn} inline-block w-auto text-center min-w-[200px] px-5 py-3 text-white transition-all bg-gray-700 dark:bg-white dark:text-gray-800 rounded-md shadow-xl sm:w-auto hover:bg-gray-900 hover:text-white shadow-neutral-300 dark:shadow-neutral-700 hover:-tranneutral-y-px`}>SEND ME UPDATES </Button>
-          </form>
+          <Subscribe/>
         </div>
       </Container>
       <Container className="bg-[#F2F4FF] " fluid>

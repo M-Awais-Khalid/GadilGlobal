@@ -6,7 +6,6 @@ import 'react-phone-input-2/lib/bootstrap.css';
 
 function DemoForm({headText}) {
     const [Fname, setFName] = useState('');
-    const [Lname, setLName] = useState('');
     const [email, setEmail] = useState('');
     const [company, setCompany] = useState('');
     const [title, setTitle] = useState('');
@@ -15,7 +14,6 @@ function DemoForm({headText}) {
     const [isLoading, setIsLoading] = useState(false); // Loading state
 
     const FnameChange = (e) => setFName(e.target.value);
-    const LnameChange = (e) => setLName(e.target.value);
     const emailChange = (e) => setEmail(e.target.value);
     const compChange = (e) => setCompany(e.target.value);
     const titleChange = (e) => setTitle(e.target.value);
@@ -23,10 +21,10 @@ function DemoForm({headText}) {
   
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const name = Fname + ' ' + Lname;
+        const name = Fname;
         setIsLoading(true); // Set loading state to true
 
-        if (!Fname || !Lname || !email || !company) {
+        if (!Fname || !email || !company) {
             return toast.error("Fill all the details first");
         }
 
@@ -37,7 +35,7 @@ function DemoForm({headText}) {
         const templateParams = {
             from_name: name,
             from_email: email,
-            to_name: 'Athar Raza - admin',
+            to_name: 'Awais Khalid - admin',
             company: company,
             title: title,
             phone: phone,
@@ -55,7 +53,6 @@ function DemoForm({headText}) {
                 },
             });
             setFName('');
-            setLName('');
             setEmail('');
             setCompany('');
             setTitle('');
@@ -81,29 +78,12 @@ function DemoForm({headText}) {
                             <label className='w-full md:w-1/3 text-gray-700'>
                                 Name <span className='text-red-500'>*</span>
                             </label>
-                            <div className='flex flex-col items-center justify-center md:flex-row w-full md:w-2/3 md:space-x-4'>
-
-                                <div className='flex flex-col w-full md:w-1/2 mt-4 md:mt-0'>
                                     <input
                                         onChange={FnameChange}
                                         value={Fname}
                                         type='text'
-                                        className='py-2 rounded border border-gray-400 px-2 focus:outline-none'
+                                        className='w-full md:w-2/3 py-2 rounded border border-gray-400 px-2 focus:outline-none'
                                     />
-                                    <label className='text-xs font-medium mt-1'>First Name</label>
-                                </div>
-
-                                <div className='flex flex-col w-full md:w-1/2 mt-4 md:mt-0'>
-                                    <input
-                                        onChange={LnameChange}
-                                        value={Lname}
-                                        type='text'
-                                        className='py-2 rounded border border-gray-400 px-2 focus:outline-none'
-                                    />
-                                    <label className='text-xs font-medium mt-1'>Last Name</label>
-                                </div>
-
-                            </div>
                         </div>
                         <div className='flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0'>
                             <label className='w-full md:w-1/3 text-gray-700'>
@@ -142,7 +122,6 @@ function DemoForm({headText}) {
                                 country={'pk'}
                                 value={phone}
                                 onChange={setphone}
-                                className='w-full md:w-1/2'
                             />
                         </div>
                         <div className='flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0'>

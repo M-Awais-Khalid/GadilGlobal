@@ -9,6 +9,8 @@ import DemoForm from './Components/DermoRequest/DemoForm';
 import FaqSection from './Components/FaqSection/FaqSection';
 import ContactUs from './Pages/Contact/ContactUs';
 import AboutUs from './Pages/Company/AboutUs';
+import HeroSection from './Components/HeroSection/HeroSection';
+import Error from './Pages/404Page/Error';
 function App() {
   return (
     <div className="App">
@@ -19,6 +21,8 @@ function App() {
     <Route path="/demo" element={<FaqSection/>} />
     <Route path="/ContactUs" element={<ContactUs/>}/>
     <Route path="/Company" element={<AboutUs/>}/>
+    <Route path="/hero" element={<HeroSection/>} />
+    <Route path="*" element={<Error/>} />
     </Routes>
     <Footer/>
     </div>

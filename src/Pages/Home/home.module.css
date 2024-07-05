@@ -32,7 +32,7 @@
 }
 
 .Benif{
-    padding: 34px 19%;
+    padding: 34px 20%;
 }
 .Benif > p {
     color: #3b3a3cba;
@@ -44,8 +44,8 @@
 }
 .mailSub{
     text-align: center;
-    margin:58px 20px;
-    padding: 75px 60px;
+    margin:48px 20px;
+    padding: 75px 150px;
     border-radius: 25px;
 }
 .subForm{
@@ -77,3 +77,15 @@
     left: 80%;
     filter: blur(75px);
 }  
+@media screen and (max-width: 992px) {
+    .bgintro{
+        padding: 34px 5%;
+    }
+    .Benif{
+        padding: 34px 5%;
+    }
+    .mailSub{
+        margin: 48px 1px;
+        padding: 75px 25px;
+    }
+}
